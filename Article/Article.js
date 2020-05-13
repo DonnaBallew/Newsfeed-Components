@@ -86,6 +86,7 @@ const data = [
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`,
   },
+
   // 5. Add new article to the array
   {
     title: "New Article added to the Array in 2019",
@@ -148,9 +149,9 @@ function articleMaker(info) {
   //Add content = refer to the array, above
   title.textContent = info.title;
   date.textContent = info.date;
-  par1.textContent = info.firstPar;
-  par2.textConent = info.secondPar;
-  par3.textContent - info.thirdPar;
+  par1.textContent = info.firstParagraph;
+  par2.textConent = info.secondParagraph;
+  par3.textContent - info.thirdParagraph;
   button.textContent = "\u25bc";
 
   // 2. Event Listener
