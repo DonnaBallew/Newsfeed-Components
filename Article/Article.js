@@ -121,20 +121,28 @@ function articleMaker(info) {
   const par2 = document.createElement("p");
   const par3 = document.createElement("p");
   const button = document.createElement("span");
+
+  //Tree-like structure for elements
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(par1);
+  article.appendChild(par2);
+  article.appendChild(par3);
+  article.appendChild(button);
+
+  //Add content = refer to the array, above
+  title.textContent = info.title;
+  date.textContent = info.date;
+  par1.textContent = info.firstPar;
+  par2.textContent = info.secondPar;
+  par3.textContent = info.thirdPar;
+  button.textContent = "/u25bc";
+
+  // 2. Event Listener
+  button.addEventListener("click", () => {
+    article.classList.toggle("article-open");
+  });
+
+  // 3. Return component
+  return article;
 }
-
-//Tree-like structure for elements
-article.appendChild(title);
-article.appendChild(date);
-article.appendChild(par1);
-article.appendChild(par2);
-article.appendChild(par3);
-article.appendChild(button);
-
-//Add content = refer to the array, above
-title.textContent = info.title;
-date.textContent = info.date;
-par1.textContent = info.firstPar;
-par2.textContent = info.secondPar;
-par3.textContent = info.thirdPar;
-button.textContent = "/u25bc";
