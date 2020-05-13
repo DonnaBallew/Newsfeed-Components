@@ -130,6 +130,11 @@ function articleMaker(info) {
   article.appendChild(par3);
   article.appendChild(button);
 
+  //Create class names
+  article.classList.add("article");
+  date.classList.add("date");
+  button.classList.add("expandButton");
+
   //Add content = refer to the array, above
   title.textContent = info.title;
   date.textContent = info.date;
@@ -146,3 +151,11 @@ function articleMaker(info) {
   // 3. Return component
   return article;
 }
+
+// 4. Loop over data
+
+const createArticle = document.querySelectorAll(".articles");
+
+data.forEach((newInfo) => {
+  createArticle.appendChild(articleMaker(newInfo));
+});
