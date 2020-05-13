@@ -154,7 +154,7 @@ function articleMaker(info) {
 
 // 4. Loop over data
 
-const createArticle = document.querySelectorAll(".articles");
+const createArticle = document.querySelector(".articles");
 
 data.forEach((newInfo) => {
   createArticle.appendChild(articleMaker(newInfo));
