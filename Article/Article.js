@@ -130,3 +130,11 @@ article.appendChild(par1);
 article.appendChild(par2);
 article.appendChild(par3);
 article.appendChild(button);
+
+//Add content = refer to the array, above
+title.textContent = info.title;
+date.textContent = info.date;
+par1.textContent = info.firstPar;
+par2.textContent = info.secondPar;
+par3.textContent = info.thirdPar;
+button.textContent = "/u25bc";
