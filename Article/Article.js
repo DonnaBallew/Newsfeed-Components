@@ -86,6 +86,16 @@ const data = [
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`,
   },
+  // 5. Add new article to the array
+  {
+    title: "New Article added to the Array in 2019",
+    date: "Jan 22, 2019",
+    firstParagraph: `Blah, blah, blah...blah, blah.`,
+
+    secondParagraph: `Blah, blah, blah...blah, blah!`,
+
+    thirdParagraph: `Blah, blah, blah...blah, blah?`,
+  },
 ];
 
 /* Step 1: Write a component called 'articleMaker' to create an article. You want your component to return markup like the template below: 
@@ -139,9 +149,9 @@ function articleMaker(info) {
   title.textContent = info.title;
   date.textContent = info.date;
   par1.textContent = info.firstPar;
-  par2.textContent = info.secondPar;
-  par3.textContent = info.thirdPar;
-  button.textContent = "/u25bc";
+  par2.textConent = info.secondPar;
+  par3.textContent - info.thirdPar;
+  button.textContent = "\u25bc";
 
   // 2. Event Listener
   button.addEventListener("click", () => {
