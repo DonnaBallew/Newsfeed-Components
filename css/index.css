@@ -83,6 +83,9 @@ body {
 .article-open {
   height: auto;
 }
+.hide-btn {
+  display: none;
+}
 .menu-button {
   position: absolute;
   left: 20px;

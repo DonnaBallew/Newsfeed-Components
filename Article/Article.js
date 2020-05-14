@@ -89,8 +89,8 @@ const data = [
 
   // 5. Add new article to the array
   {
-    title: "New Article added to the Array in 2019",
-    date: "Jan 22, 2019",
+    title: "New Article added to the Array in 2020",
+    date: "May 13, 2020",
     firstParagraph: `Blah, blah, blah...blah, blah.`,
 
     secondParagraph: `Blah, blah, blah...blah, blah!`,
@@ -132,8 +132,8 @@ function articleMaker(info) {
   const par2 = document.createElement("p");
   const par3 = document.createElement("p");
   const btnPanel = document.createElement("div");
-  const expandBtn = document.createElement("button");
-  const closeBtn = document.createElement("button");
+  const expandBtn = document.createElement("span");
+  const closeBtn = document.createElement("span");
 
   // Tree-like structure for elements
   article.appendChild(title);
@@ -148,7 +148,6 @@ function articleMaker(info) {
   // Create class names
   article.classList.add("article");
   date.classList.add("date");
-  btnPanel.classList.add("buttonPanel");
   expandBtn.classList.add("expandButton");
   closeBtn.classList.add("expandButton", "hide-btn");
 
@@ -163,9 +162,9 @@ function articleMaker(info) {
 
   // 2. Event listener
   btnPanel.addEventListener("click", () => {
+    article.classList.toggle("article-open");
     expandBtn.classList.toggle("hide-btn");
     closeBtn.classList.toggle("hide-btn");
-    article.classList.toggle("article-open");
   });
 
   // 3. Return component
