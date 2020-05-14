@@ -50,7 +50,7 @@ function menuMaker(info) {
   // Create class names
   menu.classList.add("menu");
 
-  // 4. Event listener
+  // 3. & 4. Select the menu button with the DOM selector & Event listener
   const button = document.querySelector(".menu-button");
   button.addEventListener("click", () => {
     menu.classList.toggle("menu--open");

@@ -132,6 +132,7 @@ function articleMaker(info) {
   const par2 = document.createElement("p");
   const par3 = document.createElement("p");
   const button = document.createElement("span");
+  const closeButton = document.createElement("div");
 
   // Tree-like structure for elements
   article.appendChild(title);
@@ -140,11 +141,13 @@ function articleMaker(info) {
   article.appendChild(par2);
   article.appendChild(par3);
   article.appendChild(button);
+  article.appendChild(closeButton);
 
   // Create class names
   article.classList.add("article");
   date.classList.add("date");
   button.classList.add("expandButton");
+  closeButton.classList.add("closeButton");
 
   // Add content = refer to the array, above
   title.textContent = info.title;
@@ -153,6 +156,7 @@ function articleMaker(info) {
   par2.textContent = info.secondParagraph;
   par3.textContent = info.thirdParagraph;
   button.textContent = "\u25bc";
+  closeButton.textContent = "\u25b2";
 
   // 2. Event listener
   button.addEventListener("click", () => {
