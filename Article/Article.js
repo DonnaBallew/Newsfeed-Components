@@ -131,8 +131,9 @@ function articleMaker(info) {
   const par1 = document.createElement("p");
   const par2 = document.createElement("p");
   const par3 = document.createElement("p");
-  const button = document.createElement("span");
-  const closeButton = document.createElement("div");
+  const btnPanel = document.createElement("div");
+  const expandBtn = document.createElement("button");
+  const closeBtn = document.createElement("button");
 
   // Tree-like structure for elements
   article.appendChild(title);
@@ -140,14 +141,16 @@ function articleMaker(info) {
   article.appendChild(par1);
   article.appendChild(par2);
   article.appendChild(par3);
-  article.appendChild(button);
-  article.appendChild(closeButton);
+  article.appendChild(btnPanel);
+  btnPanel.appendChild(expandBtn);
+  btnPanel.appendChild(closeBtn);
 
   // Create class names
   article.classList.add("article");
   date.classList.add("date");
-  button.classList.add("expandButton");
-  closeButton.classList.add("closeButton");
+  btnPanel.classList.add("buttonPanel");
+  expandBtn.classList.add("expandButton");
+  closeBtn.classList.add("expandButton", "hide-btn");
 
   // Add content = refer to the array, above
   title.textContent = info.title;
@@ -155,11 +158,13 @@ function articleMaker(info) {
   par1.textContent = info.firstParagraph;
   par2.textContent = info.secondParagraph;
   par3.textContent = info.thirdParagraph;
-  button.textContent = "\u25bc";
-  closeButton.textContent = "\u25b2";
+  expandBtn.textContent = "\u25bc";
+  closeBtn.textContent = "\u25b2";
 
   // 2. Event listener
-  button.addEventListener("click", () => {
+  btnPanel.addEventListener("click", () => {
+    expandBtn.classList.toggle("hide-btn");
+    closeBtn.classList.toggle("hide-btn");
     article.classList.toggle("article-open");
   });
 
