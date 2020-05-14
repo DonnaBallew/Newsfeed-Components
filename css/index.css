@@ -81,7 +81,7 @@ body {
   background-color: white;
 }
 .article-open {
-  height: 400px;
+  height: auto;
 }
 .menu-button {
   position: absolute;

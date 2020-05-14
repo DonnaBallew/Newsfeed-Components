@@ -50,7 +50,7 @@ function menuMaker(info) {
   // Create class names
   menu.classList.add("menu");
 
-  // 3 & 4. Use the DOM selector & Event listener
+  // 4. Event listener
   const button = document.querySelector(".menu-button");
   button.addEventListener("click", () => {
     menu.classList.toggle("menu--open");
@@ -60,6 +60,7 @@ function menuMaker(info) {
   return menu;
 }
 
+// 6. Create menu component
 const header = document
   .querySelector(".header")
-  .appendChild(createMenu(menuItems));
+  .appendChild(menuMaker(menuItems));

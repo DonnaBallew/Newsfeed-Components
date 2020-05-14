@@ -122,9 +122,9 @@ const data = [
 
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 */
-// 1. Create a functiion
+// 1. Create a Function
 function articleMaker(info) {
-  //Create elements
+  // Create Elements
   const article = document.createElement("div");
   const title = document.createElement("h2");
   const date = document.createElement("p");
@@ -133,7 +133,7 @@ function articleMaker(info) {
   const par3 = document.createElement("p");
   const button = document.createElement("span");
 
-  //Tree-like structure for elements
+  // Tree-like structure for elements
   article.appendChild(title);
   article.appendChild(date);
   article.appendChild(par1);
@@ -141,20 +141,20 @@ function articleMaker(info) {
   article.appendChild(par3);
   article.appendChild(button);
 
-  //Create class names
+  // Create class names
   article.classList.add("article");
   date.classList.add("date");
   button.classList.add("expandButton");
 
-  //Add content = refer to the array, above
+  // Add content = refer to the array, above
   title.textContent = info.title;
   date.textContent = info.date;
   par1.textContent = info.firstParagraph;
-  par2.textConent = info.secondParagraph;
-  par3.textContent - info.thirdParagraph;
+  par2.textContent = info.secondParagraph;
+  par3.textContent = info.thirdParagraph;
   button.textContent = "\u25bc";
 
-  // 2. Event Listener
+  // 2. Event listener
   button.addEventListener("click", () => {
     article.classList.toggle("article-open");
   });
@@ -163,8 +163,7 @@ function articleMaker(info) {
   return article;
 }
 
-// 4. Loop over data
-
+// 4. Creat component for each object
 const createArticle = document.querySelector(".articles");
 
 data.forEach((newInfo) => {
